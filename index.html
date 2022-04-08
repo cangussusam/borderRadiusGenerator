@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Generator</title>
+
+    <link rel="stylesheet" href="../../../pro-archive/reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="header">
+        <h1 class="header__title">Border Radius Generator</h1>
+    </header>
+
+    <main>
+
+        <div class="border"></div>
+
+        <div class="container">
+            <div class="modifier">
+                <form id="modifier__form" class="form__um container">
+                    <label for="radius" class="modifier__label">Radius: </label>
+                    <input class ="modifier__input" id="radius">
+
+                    <label for="radius-top-left" class="modifier__label">Top Left: </label>
+                    <input class ="modifier__input" id="radius-top-left">
+
+                    <label for="radius-top-right" class="modifier__label">Top Right: </label>
+                    <input class ="modifier__input" id="radius-top-right">
+
+                    <label for="radius-bottom-left" class="modifier__label">Bottom Left:</label>
+                    <input class ="modifier__input" id="radius-bottom-left">
+
+                    <label for="radius-bottom-right" class="modifier__label">Bottom Right: </label>
+                    <input class ="modifier__input" id="radius-bottom-right">   
+                </form>
+            </div>
+            
+            <div class="submit">
+                <button class="submit__button" form="modifier__form" type="submit">Criar Borda</button>
+            </div>
+
+            <div class="units">
+                <h1 class="units__title">Escolha A Unidade</h1>
+                <form id="units__form" class="form__dois container">
+                    <label for="percentage" class="units__label">Porcentagem (%): </label>
+                    <input type="radio" class="units__input" id="percentage" name="unidades" checked>
+                    
+                    <label for="pixels" class="units__label">Pixels (px): </label>
+                    <input type="radio" class="units__input" id="pixels" name="unidades">
+                </form>
+                <div class="units__div">
+                    <button class="units__button" form="units__form">Escolher Unidade</button>
+                </div>
+            </div>
+
+            <div class="output">
+                <p class="output__paragraph" id="title__css">CSS: </p>
+                <p class="output__css"></p>
+            </div>    
+        </div>
+
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/choice-units.js" type="module"> </script>
+
+</body>
+</html>
